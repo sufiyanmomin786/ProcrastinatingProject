@@ -1,0 +1,63 @@
+<html>
+<head>
+</head>
+
+<body>
+
+    <script >
+
+        function validate(){
+            
+            var username = document.getElementById("name").value;
+            var password = document.getElementById("pwd").valuue;
+//            console.warn(username)
+//            console.warn(password)
+//            var status = false
+            
+            if(username.includes("@")){
+                console.warn("username")
+                document.getElementById("userp").innerHTML="Invalid Username";
+                status=false;
+            }
+            if(password.length >=6){
+                console.warn("password")
+                document.getElementById("pwdp").innerHTML="Invalid Password *length must be greater than 6";
+                status= false
+            } 
+            status= true    
+        }
+    
+    </script>
+    
+    
+<div style="padding: 100">
+    
+    <div style="background-color: antiquewhite;box-shadow:  0 4px 8px 0 rgba(0,0,0,0.2);margin: auto;height: 300px;width: 400px;align-content: center;padding-top: 100">
+    
+        <form name="formid" action="#" onsubmit="return validate()">
+        <div style="padding-left: 100">
+            
+            <div style="padding:5">
+                <label>Username:</label>
+                <input type="text" name="userId" id="uid" >
+            </div >
+            <p id="userp"></p>
+            <div style="padding:5">
+                <label>Password:</label>
+                <input type="password" name="password" id="pwd">
+                
+            </div>
+            <p id="pwdp"></p>
+            <div style="padding-left:80;padding-top: 30">
+
+                <input type="submit" value="submit" id="btn">
+            </div>
+        </div>
+        </form>
+    </div>
+    </div>
+            
+    
+</body>
+    
+</html>
